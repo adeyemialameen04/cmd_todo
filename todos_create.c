@@ -11,11 +11,6 @@ data_t *init_todos(int size)
 	}
 	int i;
 
-	data->todos = malloc(sizeof(todo_item *) * size);
-	for (i = 0; i < size; i++)
-	{
-		data->todos[i] = NULL;
-	}
 	data->head = NULL;
 	data->size = size;
 

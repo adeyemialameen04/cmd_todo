@@ -28,7 +28,7 @@ int main(void)
 	printf("\033[0m");
 	while (1)
 	{
-		printf("Command: ");
+		printf("\033[1;34mCommand: \033[0m");
 		scanf("%d", &cmd);
 		clear_input_buffer();
 		switch (cmd)
@@ -52,7 +52,11 @@ int main(void)
 			clear();
 			break;
 		case 100:
-			printf("getting here?\n");
+			int ch;
+			printf("Do u want to save these todos for later? (y | n): ");
+			ch = getchar();
+			if (ch == 'y')
+				save_todo(data);
 			free_todos(data);
 			exit(EXIT_SUCCESS);
 			break;
@@ -62,6 +66,11 @@ int main(void)
 		}
 	}
 
+	int ch;
+	printf("Do u want to save these todos for later? (y | n): ");
+	ch = getchar();
+	if (ch == 'y')
+		save_todo(data);
 	free_todos(data);
 	return (0);
 }

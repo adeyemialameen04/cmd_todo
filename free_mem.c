@@ -22,6 +22,5 @@ void free_todos(data_t *data)
 		curr = next;
 	}
 
-	free(data->todos);
 	free(data);
 }
