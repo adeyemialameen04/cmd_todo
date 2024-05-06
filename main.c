@@ -23,7 +23,7 @@ int main(void)
 	data_t *data = init_todos(20);
 
 	printf("\033[1;32m=========== Welcome to this todo app by CodeSavantAl ===========\n");
-	printf("\033[1;32m[[[[[[[[[[[[[[[[   Lets go over the commands  ]]]]]]]]]]]]]]]\n");
+	printf("\033[1;32m[[[[[[[[[[[[[[[[	 Lets go over the commands	]]]]]]]]]]]]]]]\n");
 	printf("Press (1) to add a new todo, (2) to delete a todo, and (3) to print all todos, (4) to clear the terminal, (100) to quit the program\n");
 	printf("\033[0m");
 	while (1)
@@ -53,6 +53,7 @@ int main(void)
 			break;
 		case 100:
 			int ch;
+
 			printf("Do u want to save these todos for later? (y | n): ");
 			ch = getchar();
 			if (ch == 'y')

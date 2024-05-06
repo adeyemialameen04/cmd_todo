@@ -16,13 +16,13 @@ void display_todos(data_t *data)
 		switch (curr->priority)
 		{
 		case 0:
-			printf("\033[1;33m%s\033[0m", curr->todo);
+			printf("\033[1;33m%s [P -> LOW] \033[0m", curr->todo);
 			break;
 		case 1:
-			printf("\033[1;36m%s\033[0m", curr->todo);
+			printf("\033[1;36m%s [P -> MEDIUM] \033[0m", curr->todo);
 			break;
 		case 2:
-			printf("\033[1;35m%s\033[0m", curr->todo);
+			printf("\033[1;35m%s [P -> HIGH] \033[0m", curr->todo);
 			break;
 		default:
 			break;
